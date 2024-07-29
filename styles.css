@@ -1,0 +1,26 @@
+body{
+  background-color: black;
+  color: lavender;
+  margin: 0;
+  font-family: monospace;
+  font-size: 3rem;
+}
+
+button, input{
+  font: inherit;
+}
+
+#clock-container{
+  display: flex;
+}
+
+.error-display{
+  color: red;
+}
+
+.card{
+  display: none;
+  background-color: yellow;
+  min-height: 40px;
+}
+
