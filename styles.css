@@ -9,6 +9,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", monospace;
+  font-size: 1rem;
   letter-spacing: 1px;
   /* color: #2F4858; */
 }
@@ -78,7 +79,7 @@ input {
   padding-right: 6.5vw;
   padding-left: 2vw;
   outline: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 main {
@@ -89,7 +90,7 @@ main {
 }
 
 button {
-  width: 30px;
+  width: 35px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -119,16 +120,9 @@ button {
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
-.weather-icon img {
-  width: 100px;
-}
-
 .card {
   display: none;
-  grid-template-columns: 100px 100px 100px 100px;
-  grid-template-rows: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
+  gap: 20px;
 }
 
 .card p {
@@ -140,14 +134,16 @@ button {
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
-.description-display {
-  grid-column: 3 / 5;
-  width: 100% !important;
-}
 
 .date {
   display: flex;
-  grid-column: span 2;
+
+  width: fit-content;
+  background-color: var(--call-to-action-2);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
 
@@ -162,6 +158,16 @@ button {
   display: flex;
   border-radius: 12px;
   background: var(--call-to-action-2);
-  grid-column: span 2;
+  text-align: center;
+  align-items: center;
+  height: 100%;
   padding: 15px;
+  margin-top: 6px;
+}
+
+
+.date-time{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
