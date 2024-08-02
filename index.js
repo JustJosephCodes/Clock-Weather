@@ -7,7 +7,8 @@ const clockContainer = document.querySelector("#clock-container");
 const clock = document.querySelector("#clock");
 let meridiemSpan = document.querySelector("#meridiem");
 
-
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+const date = document.querySelector(".date")
 
 const weather = document.querySelector(".weather");
 const cityInput = document.querySelector(".city-input");
@@ -86,7 +87,8 @@ function displayWeather(data) {
 
 function updateClock() {
   const now = new Date();
-
+  const day = now.getDate();
+  const year = now.getFullYear();
   let hours = now.getHours();
   let meridiem = hours >= 12 ? "PM" : "AM";
   hours = hours % 12 || 12;
@@ -104,7 +106,9 @@ function updateClock() {
 
   clockContainer.appendChild(meridiemSpan);
 
+  const currentMonth = months[now.getMonth()]
 
+  date.textContent = `${day} ${currentMonth} ${year} `
   
 }
 

@@ -161,7 +161,8 @@ button {
   text-align: center;
   align-items: center;
   height: 100%;
-  padding: 15px;
+  padding: 15px 30px;
+  gap: 5px;
   margin-top: 6px;
 }
 
