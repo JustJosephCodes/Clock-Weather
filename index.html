@@ -3,27 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital Clock</title>
+  <title>Clock and Weather</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div id="clock-container" >
-    <p id="clock">00:00:00 </p>
-    <p id="meridiem"></p>
-  </div>
+    <div class="wrapper">
+      <main>
+        <div class="weather-wrapper">
+          <form class="weather">
+          <input type="text" class="city-input" placeholder="Enter city" maxlength="20">
+          <button type="submit">
+            <img src="./images/magnifying-glass.png" alt="magnifying-glass">
+          </button>
+        </form>
+        <p class="city-display" ></p>
+        </div>
 
-  <form class="weather">
-    <input type="text" class="city-input" placeholder="Enter city">
-    <button type="submit">Get weather</button>
-  </form>
+        <div class="weather-icon">
+          <div>
+            <img id="weatherIcon" alt="">
+          </div>
+        </div>
 
-    <div class="card">
-      <!-- <h1 class="city-display">Miami</h1>
-      <p class="temp-display">30°c</p>
-      <p class="humidity-display">Humidity: 75%</p>
-      <p class="description-display">Clear skies</p>
-      <p class="error-display">Please enter a city</p> -->
+        <div class="card">
+          <p class="temp-display"></p>
+          <p class="humidity-display"></p>
+          <p class="description-display"></p>    
+          <div id="clock-container">
+              <p id="clock"></p>
+              <p id="meridiem"></p>
+          </div>
+          
+            <p class="date"></p>
+          
+        </div>
+      </main>
     </div>
 
   <script src="index.js"></script>
