@@ -3,6 +3,8 @@ const tempDisplay = document.querySelector(".temp-display");
 const humidityDisplay = document.querySelector(".humidity-display");
 const descDisplay = document.querySelector(".description-display");
 
+const weatherIcon = document.querySelector("#weatherIcon");
+
 const clockContainer = document.querySelector("#clock-container");
 const clock = document.querySelector("#clock");
 let meridiemSpan = document.querySelector("#meridiem");
@@ -81,6 +83,49 @@ function displayWeather(data) {
   card.appendChild(descDisplay);
 
   cityInput.value = "";
+
+  changeIcon(id)
+}
+
+function changeIcon(id) {
+
+  document.querySelector(".weather-icon").style.display = "flex";
+  switch (true) {
+    case (id >= 200 && id < 300):
+      weatherIcon.src =
+        "./images/thunderstorm_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg";
+      break
+
+    case (id >= 300 && id < 400):
+      weatherIcon.src = "./images/10d@2x.png";
+      break
+
+    case (id > 500 && id < 600):
+      weatherIcon.src = "./images/09d@2x.png";
+      break
+
+    case (id > 600 && id < 700):
+      weatherIcon.src = "./images/13d@2x.png";
+      break
+
+    case (id > 700 && id < 800):
+      weatherIcon.src = "./images/50d@2x.png";
+      break
+
+    case (id === 800):
+      weatherIcon.src = "./images/sunny_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg";
+      break
+
+    case (id > 800):
+      weatherIcon.src =
+        "./images/partly_cloudy_day_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg";
+        break
+
+    default:
+      document.querySelector(".weather-icon").style.display = "none";
+      break;
+  }
+  
 }
 
 // clock program
