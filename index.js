@@ -4,6 +4,7 @@ const humidityDisplay = document.querySelector(".humidity-display");
 const descDisplay = document.querySelector(".description-display");
 
 const weatherIcon = document.querySelector("#weatherIcon");
+const weatherIconParent = document.querySelector(".weather-icon")
 
 const clockContainer = document.querySelector("#clock-container");
 const clock = document.querySelector("#clock");
@@ -48,6 +49,8 @@ async function getWeather(city) {
 }
 
 function displayError(message) {
+  cityDisplay.style.display = "none"
+  weatherIconParent.style.display = "none" 
   const errorDisplay = document.createElement("p");
   errorDisplay.textContent = message;
   errorDisplay.classList.add("error-display");

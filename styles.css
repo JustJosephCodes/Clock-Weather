@@ -104,7 +104,6 @@ button {
 .error-display {
   color: black;
   margin-inline: auto ;
-  margin-top: -10px;
 }
 
 .weather-icon {
